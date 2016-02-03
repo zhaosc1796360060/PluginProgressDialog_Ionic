@@ -25,13 +25,13 @@ public class ProgressDialogPlugin extends CordovaPlugin
         throws JSONException
     {
 
-        if (args.getString(0) != null)
-        {
-            content = args.getString(0);
-        }
 
         if (SHOWPROGRESS.equals(action))
         {
+		if (args!=null&&args.getString(0) != null)
+        {
+            content = args.getString(0);
+        }
 
             showProgerss();
             return true;
